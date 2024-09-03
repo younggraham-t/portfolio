@@ -3,7 +3,7 @@ import NavPanel from "./nav-panel/nav-panel";
 
 export default function SideBar() {
     return (
-        <div className={"flex h-full flex-col space-y-4 px-2 py-2 md:px-1 md:ml-1"}>
+        <div className={"flex h-full flex-col md:justify-between px-2 py-2 md:px-1 md:ml-1"}>
             <MainTitle />
             <NavPanel />
         </div>
