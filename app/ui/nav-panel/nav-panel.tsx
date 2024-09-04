@@ -1,6 +1,7 @@
 import NavLinks from "@/app/ui/nav-panel/nav-links"
 import SocialIcons from "./social-links"
 import { greatVibes } from '../fonts'
+import GradientBorder from "../gradient-border"
 
 export default function NavPanel() {
     return (
@@ -9,8 +10,10 @@ export default function NavPanel() {
                 <NavLinks/>
             </div>
             <div className={`hidden md:flex w-full justify-center space-x-8 items-center`}>
-                <form  method="get" action="/api/resume" className={`p-1 bg-gradient-to-r from-red-500 to-orange-500 rounded text-primary-color`}> 
-                    <button type="submit" className={`p-1 hover:bg-transparent hover:text-bg-color rounded bg-bg-color`}>Resume</button>
+                <form  method="get" action="/api/resume" > 
+                    <GradientBorder> 
+                        <button type="submit">Resume</button>
+                    </GradientBorder>
                 </form>
             </div>
             <div className={`flex w-full justify-center space-x-4 items-center`}>
