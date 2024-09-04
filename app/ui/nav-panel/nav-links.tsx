@@ -17,17 +17,13 @@ export default function NavLinks() {
                     <Link 
                         key={link.name}
                         href={link.href}
-                        className={clsx(
-                            `grow items-center justify-center text-center gap-2 
-                            rounded-md bg-transparent p-1 text-xl font-medium border-2 
-                            border-orange-500 
-                             hover:text-orange-500 hover:bg-orange-500/30`,
-                            {
-                                "text-orange-500 bg-orange-500/30": pathName === link.href,
-                            },
-                        )}
+                        className={`grow items-center justify-center text-center gap-2 rounded-md p-1 text-xl font-medium bg-gradient-to-r from-red-500 to-orange-500`}
                     >
-                        <p>{link.name}</p>
+                        <p className={clsx(`bg-bg-color rounded-md hover:text-bg-color hover:bg-transparent`,
+                                        {
+                                            "text-primary-color": pathName === link.href,
+                                        },
+                        )}>{link.name}</p>
                     </Link>
 
                 )

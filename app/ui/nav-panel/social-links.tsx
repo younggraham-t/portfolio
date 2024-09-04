@@ -18,7 +18,14 @@ export default function SocialIcons() {
                         target="_blank"
                     >
                         {/* <Image className={`fill-orange-500`} src={social.icon} alt={social.name + " link"} width={48} height={48}/> */}
-                        <Icon className={`w-full h-full fill-orange-500`}/>
+                        <Icon className={`w-full h-full `} 
+							hasGradient 
+							stops={[
+                                {color: '#ef4444', offset: 30},
+							{color: '#f97316', offset: 100},
+                        	]}
+							rotateGradient= {45}
+						/>
                     </Link>
 
                 )

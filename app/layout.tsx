@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lusitana.className} antialiased bg-neutral-50 bg-stone-800 text-stone-100`}>
+      <body className={`${lusitana.className} antialiased bg-bg-color text-text-color`}>
         <div className={"flex h-screen flex-col md:flex-row md:overflow-hidden"}>
             <div className={"w-full flex-none  md:w-5/12"}>
                 <SideBar/> 
