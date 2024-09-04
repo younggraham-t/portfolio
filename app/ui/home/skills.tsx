@@ -5,7 +5,7 @@ import NextLogo from "@/public/assets/logos/next-js-logo.svg";
 import ReactLogo from "@/public/assets/logos/react-logo.svg";
 import NodeLogo from "@/public/assets/logos/node-js-logo.svg";
 import JavaScriptLogo from "@/public/assets/logos/javascript-logo.svg";
-import TypeScriptLogo from "@/public/assets/logos/git-logo.svg";
+import TypeScriptLogo from "@/public/assets/logos/typescript-logo.svg";
 import HTMLLogo from "@/public/assets/logos/html-logo.svg";
 import CSSLogo from "@/public/assets/logos/css-logo.svg";
 import MySQLLogo from "@/public/assets/logos/mysql-logo.svg";
@@ -41,16 +41,13 @@ const skills = [
     {name: "col3", contents: skillCol3},
 ]
 export default function Skills() {
-
     return (
-
           <div className={`flex mt-8 justify-between space-x-2 items-center`}>
               {skills.map((skillCol) => {
                   return (
                       <div key={skillCol.name} className={`block w-full space-y-2`}>
                           {skillCol.contents.map((skill) => {
                               return (
-                                
                                   <GradientBorder key={skill.name}>
                                       {skill.icon && 
                                       <div className={`flex w-full bg-bg-color justify-center items-center`}>
@@ -61,7 +58,6 @@ export default function Skills() {
                               )
                           })}
                       </div> 
-
                   )
               })}
           </div>
