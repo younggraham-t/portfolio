@@ -1,7 +1,7 @@
-import NavLinks from "@/app/ui/nav-panel/nav-links"
+import NavLinks from "./nav-links"
 import SocialIcons from "./social-links"
 import { greatVibes } from '../fonts'
-import GradientBorder from "../gradient-border"
+import { GradientBorderHover } from "../gradient-border"
 
 export default function NavPanel() {
     return (
@@ -11,9 +11,9 @@ export default function NavPanel() {
             </div>
             <div className={`hidden md:flex w-full justify-center space-x-8 items-center`}>
                 <form  method="get" action="/api/resume" > 
-                    <GradientBorder> 
+                    <GradientBorderHover> 
                         <button type="submit">Resume</button>
-                    </GradientBorder>
+                    </GradientBorderHover>
                 </form>
             </div>
             <div className={`flex w-full justify-center space-x-4 items-center`}>

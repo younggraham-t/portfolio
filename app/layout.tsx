@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SideBar from "./ui/sidebar";
+import SideBar from "./ui/sidebar/sidebar";
 import { lusitana } from "./ui/fonts";
 
 export const metadata: Metadata = {
@@ -16,14 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lusitana.className} antialiased bg-bg-color text-text-color`}>
-        <div className={"flex h-screen flex-col md:flex-row md:overflow-hidden"}>
-            <div className={"w-full flex-none  md:w-5/12"}>
+        <main className={"flex h-screen flex-col md:flex-row md:overflow-hidden"}>
+            <nav className={"w-full flex-none  md:w-5/12"}>
                 <SideBar/> 
-            </div>
-            <div className={"flex-grow p-6 md:overflow-y-auto md:p-12"}>
+            </nav>
+            <section className={"flex-grow p-6 md:overflow-y-auto md:p-12"}>
                 {children}
-            </div>
-        </div>
+            </section>
+        </main>
       </body>
     </html>
   );

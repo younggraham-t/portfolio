@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import GradientBorder from "../gradient-border";
+import { GradientBorderHover } from "../gradient-border";
 
 const links = [
     {name: "Home", href: "/"},
@@ -21,14 +21,14 @@ export default function NavLinks() {
                             className={`grow items-center justify-center text-center gap-2 text-xl font-medium`}
                         >
 
-                            <GradientBorder>
+                            <GradientBorderHover>
                                 <p className={clsx(
                                                 {
                                                     "text-primary-color": pathName === link.href,
                                                 },
                                 )}>{link.name}</p>
 
-                            </GradientBorder>
+                            </GradientBorderHover>
                         </Link>
                     
                 )

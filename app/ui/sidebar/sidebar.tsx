@@ -1,5 +1,5 @@
-import MainTitle from "./main-title/main-title";
-import NavPanel from "./nav-panel/nav-panel";
+import MainTitle from "./main-title";
+import NavPanel from "./nav-panel";
 
 export default function SideBar() {
     return (
