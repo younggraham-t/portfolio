@@ -20,7 +20,7 @@ export default function RootLayout({
             <nav className={"w-full flex-none  md:w-5/12"}>
                 <SideBar/> 
             </nav>
-            <section className={"flex-grow p-6 md:overflow-y-auto md:p-12"}>
+            <section className={"flex-grow p-4 md:overflow-y-auto"}>
                 {children}
             </section>
         </main>
