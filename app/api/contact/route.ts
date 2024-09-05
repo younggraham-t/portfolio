@@ -16,8 +16,8 @@ export async function POST(req: NextRequest) {
     })
 
     const mailOptions: Mail.Options = {
-        from: process.env.MY_EMAIL,
-        to: process.env.MY_EMAIL,
+        from: process.env.EMAIL,
+        to: process.env.EMAIL,
         subject: `Message from ${name} (${email})`,
         text: message,
 
