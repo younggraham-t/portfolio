@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { GitHubIcon, LinkedInIcon } from "../icons/social-icons";
+import { EmailIcon, GitHubIcon, LinkedInIcon } from "../icons/social-icons";
 
 const socials = [
     {name: "GitHub", href: "https://github.com/younggraham-t", icon: GitHubIcon},
-    {name: "LinkedIn", href: "https://www.linkedin.com/in/graham-t-young", icon: LinkedInIcon}
+    {name: "Email", href: "mailto:younggraham.t@gmail.com", icon: EmailIcon},
+    {name: "LinkedIn", href: "https://www.linkedin.com/in/graham-t-young", icon: LinkedInIcon},
 ]
 export default function SocialIcons() {
     return (
