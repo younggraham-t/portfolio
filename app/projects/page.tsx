@@ -15,9 +15,9 @@ const projects: Array<ProjectLayoutType> = [
         title: "My Portfolio",
         subtitle: "This website",
         liveUrl: "https://portfolio-graham-youngs-projects.vercel.app/",
-		githubUrl: "https://github.com/younggraham-t/portfolio",
+	githubUrl: "https://github.com/younggraham-t/portfolio",
         techStack: "NextJS, TypeScript, TailwindCSS, Vercel"
-    }
+    },
 ]
 export default function Page() {
     return (
