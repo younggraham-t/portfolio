@@ -1,23 +1,27 @@
 import { GradientBorder, GradientBorderHover } from "../gradient-border";
+import Image from "next/image";
 import Link from "next/link";
-import Image, {StaticImageData} from "next/image";
+import { getProject } from "@/lib/projects/getProject";
+import { ProjectLayoutType } from "./project-layout";
 
-export type ProjectLayoutType = {
-	id: number,
-    screenshot: StaticImageData,
-    title: string,
-    subtitle: string, 
-    liveUrl?: string,
-    githubUrl?: string,
-    shortDesc?: string,
-	longDesc?: string,
-    techStack: string,
-}
-export interface ProjectLayoutProps {
-    props: ProjectLayoutType,
-}
+export interface IndividualProjectLayoutProps {
+	id: number
+} 
 
-export default function ProjectLayout({props}: ProjectLayoutProps) {
+export default function IndividualProjectLayout({id}: IndividualProjectLayoutProps) {
+	const props: ProjectLayoutType = getProject(id)
+
+	let imageUrl = "";
+	if (props?.liveUrl) {
+		imageUrl = props.liveUrl;
+	}
+	else if (props?.githubUrl) {
+		imageUrl = props.githubUrl;
+	}
+	else {
+		imageUrl = "";
+	}
+
 
     return (
         <GradientBorder className={`grow w-full`}>
@@ -25,7 +29,7 @@ export default function ProjectLayout({props}: ProjectLayoutProps) {
                 <div className={`flex space-x-4`}>
                     {/* screenshot with link to live site*/}
 					{}
-                    <Link className={`flex hover:scale-90 w-[65%] justify-center items-center`} href={`/projects/${props.id}`}>
+                    <Link className={`flex hover:scale-90 w-[65%] justify-center items-center`} href={imageUrl}>
                         <GradientBorder className={`flex justify-center`}>
                             <Image className={`w-[92.5%]`} src={props.screenshot} alt={props.title + " screenshot"} width={1362} height={601}/>
                         </GradientBorder>
@@ -63,12 +67,14 @@ export default function ProjectLayout({props}: ProjectLayoutProps) {
                     </div>
                 </div>
                 <div className={``}>
-                    {/* short description */}
-                    {props.shortDesc && <p>{props.shortDesc}</p>}
                     {/* tech stack */}
                     <p>Technologies: {props.techStack}</p>
+					<br/>
+                    {/* long description */}
+                    {props.longDesc && <p className="whitespace-pre-wrap">{props.longDesc}</p>}
                 </div>
             </div>
         </GradientBorder>
     )
+	
 }

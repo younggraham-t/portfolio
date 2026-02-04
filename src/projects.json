@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "screenshot": "/scottayoungwebsite.png",
+    "title": "Scott A. Young Author",
+    "subtitle": "Full-Stack Web App",
+    "liveUrl": "https://scottayoungauthor.com",
+    "techStack": "React, PHP, MySQL, Mailchimp API, Bluehost",
+	"longDesc": "For this project, I worked with a client to create a full-stack web application to advertise his books. I worked with React on the front-end, and since the project was hosted on Bluehost shared hosting, I had to use PHP for the back-end code."
+  },
+  {
+    "id": 1,
+    "screenshot": "/blogproject.png",
+    "title": "Blog Application",
+    "subtitle": "A blog application built for my Network Based App Development course.",
+    "liveUrl": "https://blog-react-six-flax.vercel.app/",
+    "githubUrl": "https://blog-react-six-flax.vercel.app/",
+    "techStack": "React, JavaScript, TailwindCSS, Vercel",
+	"longDesc": "This is the final project for my Network Based Application Development Course. The goal of the project was to use web design and development techniques learned throughout the course to build a blog website. I chose to call it Backcountry Brookies to signify that it was a blog about fishing in remote locations for Brook Trout. "
+  },
+  {
+    "id": 2,
+    "screenshot": "/nextjschess.png",
+    "title": "NextJS Chess",
+    "subtitle": "Chess game built using NextJS",
+    "githubUrl": "https://github.com/younggraham-t/nextjs-chess",
+    "techStack": "NextJS, TypeScript, TailwindCSS",
+	"longDesc": "This is a project I did in my spare time. The goal was to build a web based chess simulator that would have an AI opponent similar to Chess.com. I found this a fun challenge as a way to learn the ropes of NextJS. After I implemented the main chess functionality, I lost interest in the project and stopped working on it. I feel it is at a good place, but I hope to one day return to it and add the chess engine and polish it up a bit."
+  },
+  {
+    "id": 3,
+    "screenshot": "/blackjackrust.png",
+    "title": "Blackjack Rust",
+    "subtitle": "Blackjack game built in Rust",
+    "githubUrl": "https://github.com/younggraham-t/blackjack-rust",
+    "techStack": "Rust",
+	"longDesc": "This was my submission for the final project in my programming languages course. The goal of the project was to build a somewhat complex application using a language that we didn't know, so I chose Rust. I was always interested in Rust, so this was a great opportunity to learn it and build something cool. \n\n For the project I created a game of blackjack. At first I just built it as a command line game, but I thought it would be more fun to create an interface, so I learned the basics of front-end development in Rust and built it out. I think it turned out pretty nice for my experience with Rust at the time."
+  },
+  {
+    "id": 4,
+    "screenshot": "/8queensai.png",
+    "title": "8 Queens AI Algorithms",
+    "subtitle": "Several AI algorithms to solve the 8 Queens Problem",
+    "githubUrl": "https://github.com/younggraham-t/8QueensAI",
+    "techStack": "Python",
+	"longDesc": "This was a project for my AI course in undergrad. We were learning about non-adverserial AI algorithms, and had a project to write the algorithms in python. I decided to code all the algorithms despite only needing two. The one I'm most proud of is the Genetic Algorithm because it works a lot better than the other ones. The Simulated Annealing algorithm was intersting to try to get working, and when I got it to work, I found it was worse than I thought it would be."
+  },
+  {
+    "id": 5,
+    "screenshot": "/portfolio-website.png",
+    "title": "My Portfolio",
+    "subtitle": "This website",
+    "liveUrl": "https://www.grahamtyoung.com/",
+    "githubUrl": "https://github.com/younggraham-t/portfolio",
+    "techStack": "NextJS, TypeScript, TailwindCSS, Vercel",
+	"longDesc": "This is, of course, my portfolio. I made this as a way to learn NextJS and because I wanted a place to show off some of the projects I've done. "
+  }
+]
