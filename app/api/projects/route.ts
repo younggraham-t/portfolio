@@ -1,4 +1,4 @@
-import { getProjects } from "@/lib/projects";
+import { getProjects } from "@/lib/projects/getProjects";
 
 export async function GET() {
 	

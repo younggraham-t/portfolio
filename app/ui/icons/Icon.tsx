@@ -1,6 +1,6 @@
 // Icon.tsx
 // change any hardcoded strings to adjust for your default values
-import React from "react"
+import React, { type JSX } from "react";
 
 function classNames(...classes: Array<string>): string {
   return classes.filter(Boolean).join(` `)

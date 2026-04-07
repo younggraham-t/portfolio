@@ -1,5 +1,5 @@
 import Icon, { IIconProps } from "./Icon"
-import React from "react"
+import React, { type JSX } from "react";
 
 
 
