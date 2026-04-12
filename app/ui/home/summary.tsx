@@ -1,17 +1,8 @@
-import { UserIcon } from "../icons/hero-icons"
 export default function Summary() {
     return (
         <>
-            <UserIcon className={`w-full max-h-48`} 							
-                        hasGradient 
-                        stops={[
-                            {color: '#ef4444', offset: 30},
-                            {color: '#f97316', offset: 100},
-                        ]}
-                        rotateGradient= {45}
-              />
-            <p className={`text-xl flex text-center items-center justify-center w-full`}> 
-                As a Full-Stack Developer, I have a passion for coding and building responsive full-stack applications. My unique ability to combine strong problem solving, logic, and creativity motivates me to be always learning and growing. When I&apos;m not at my computer, I spend my time reading, fishing, or playing my mandolin. 
+            <p className={`text-left items-center text-md  w-full`}> 
+I bridge the gap between clean code and robust infrastructure. With a background in software engineering and a deep focus on <strong>Linux systems</strong>, <strong>automation</strong>, and <strong>secure architecture</strong>, I build tools and environments designed for reliability and scale. Currently specializing in software systems design and engineering.
             </p>
         </>
     )

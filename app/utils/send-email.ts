@@ -3,6 +3,10 @@ import {FormData} from "../ui/contact/contact";
 
 export async function sendEmail(data: FormData) {
     const apiEndpoint = "/api/contact";
+	const honeypot = data.website_url;
+	if (honeypot != undefined) {
+		return {success: true}
+	}
 
     fetch(apiEndpoint, {
         method: 'POST',
@@ -11,9 +15,11 @@ export async function sendEmail(data: FormData) {
     })
     .then((res) => res.json())
     .then((response) =>{
-        alert(response.message);
+		
+		if (response == "Email sent")
+		return {success: true};
     })
     .catch((err) =>{
-        alert(err);
+		return {success: false};
     })
 }

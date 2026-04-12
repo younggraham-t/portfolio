@@ -12,7 +12,9 @@ export async function POST(req: NextRequest) {
         auth: {
             user: process.env.EMAIL,
             pass: process.env.EMAIL_PASSWORD,
-        }
+        },
+		debug: true,
+		logger: true,
     })
 
     const mailOptions: Mail.Options = {
@@ -31,6 +33,7 @@ export async function POST(req: NextRequest) {
             }
             else {
                 reject(err.message);
+				console.log(err);
             }
         });
     });
