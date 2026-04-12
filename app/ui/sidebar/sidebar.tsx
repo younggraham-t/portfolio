@@ -1,4 +1,3 @@
-import MainTitle from "./main-title";
 import NavPanel from "./nav-panel";
 
 export default function SideBar() {
