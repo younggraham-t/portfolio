@@ -1,5 +1,7 @@
 import Icon, { IIconProps } from "./Icon";
 
+import type { JSX } from "react";
+
 export function UserIcon(props: IIconProps): JSX.Element {
     return (
     <Icon {...props} >

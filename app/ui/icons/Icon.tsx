@@ -1,6 +1,6 @@
 // Icon.tsx
 // change any hardcoded strings to adjust for your default values
-import React from "react"
+import React, { type JSX, useId } from "react";
 
 function classNames(...classes: Array<string>): string {
   return classes.filter(Boolean).join(` `)
@@ -32,7 +32,7 @@ function Icon({
   sourceSvgWidth = 24,
   sourceSvgHeight = 24,
 }: IIconParentProps): JSX.Element {
-  const gradientId = `gradient-${Math.random().toString(36).substr(2, 9)}`
+  const gradientId = `gradient-${useId()}`
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
