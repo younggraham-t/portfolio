@@ -3,10 +3,11 @@ import "./globals.css";
 import SideBar from "./ui/sidebar/sidebar";
 import { lusitana } from "./ui/fonts";
 import { Analytics } from "@vercel/analytics/react"
+import Footer from "./ui/sidebar/footer";
 
 export const metadata: Metadata = {
   title: "Graham Young",
-  description: "Full-Stack Developer",
+  description: "MSIT Student | Aspiring DevOps & System Administrator",
 };
 
 export default function RootLayout({
@@ -16,15 +17,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lusitana.className} antialiased bg-bg-color text-text-color`}>
-        <main className={"flex h-screen flex-col md:flex-row md:overflow-hidden"}>
-            <nav className={"w-full flex-none  md:w-5/12"}>
+      <body className={`${lusitana.className} antialiased bg-bg text-text`}>
+        <main className={"flex h-screen flex-col m-auto"}>
+            <nav className={"w-full max-w-250 m-auto"}>
                 <SideBar/> 
             </nav>
-            <section className={"flex-grow p-4 md:overflow-y-auto"}>
+            <section className={"grow w-full p-4 m-auto "}>
                 {children}
                 <Analytics/>
             </section>
+			<footer className={`max-w-250 m-auto`}>
+			<Footer />
+			</footer>
         </main>
       </body>
     </html>
