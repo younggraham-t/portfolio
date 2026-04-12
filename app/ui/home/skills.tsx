@@ -16,50 +16,67 @@ import RustLogo from "@/public/assets/logos/rust-logo.svg";
 
 
 const skillCol1 = [
-    {name: "Git", icon: GitLogo},
-    {name: "NextJS", icon: NextLogo},
-    {name: "ReactJS", icon: ReactLogo},
-    {name: "NodeJS", icon: NodeLogo},
+	{ name: "Git", icon: GitLogo },
+	{ name: "TypeScript", icon: TypeScriptLogo },
+	{ name: "NodeJS", icon: NodeLogo },
+	{ name: "Java", icon: JavaLogo },
+	{ name: "Python", icon: PythonLogo },
+	{ name: "MySQL", icon: MySQLLogo },
+	{ name: "PHP", icon: PHPLogo },
+	{ name: "Rust", icon: RustLogo },
+	{ name: "NextJS", icon: NextLogo },
 ]
-const skillCol2 = [
-    {name: "JavaScript", icon: JavaScriptLogo},
-    {name: "TypeScript", icon: TypeScriptLogo},
-    {name: "HTML", icon: HTMLLogo},
-    {name: "CSS", icon: CSSLogo},
-    {name: "MySQL", icon: MySQLLogo},
-]
-const skillCol3 = [
-    {name: "Java", icon: JavaLogo},
-    {name: "Python", icon: PythonLogo}, 
-    {name: "PHP", icon: PHPLogo},
-    {name: "Rust", icon: RustLogo},
-]
+// const skillCol2 = [
+//     {name: "NodeJS", icon: NodeLogo},
+//     {name: "TypeScript", icon: TypeScriptLogo},
+//     {name: "MySQL", icon: MySQLLogo},
+//     {name: "HTML", icon: HTMLLogo},
+//     {name: "CSS", icon: CSSLogo},
+// ]
+// const skillCol3 = [
+//     {name: "Java", icon: JavaLogo},
+//     {name: "PHP", icon: PHPLogo},
+//     {name: "Rust", icon: RustLogo},
+//     {name: "ReactJS", icon: ReactLogo},
+// ]
 
 const skills = [
-    {name: "col1", contents: skillCol1},
-    {name: "col2", contents: skillCol2},
-    {name: "col3", contents: skillCol3},
+	{ name: "col1", contents: skillCol1 },
+	// {name: "col2", contents: skillCol2},
+	// {name: "col3", contents: skillCol3},
+]
+
+const otherSkills = [
+
+	{ name: "ReactJS", icon: ReactLogo },
+	{ name: "CSS", icon: CSSLogo },
+	{ name: "HTML", icon: HTMLLogo },
+	{ name: "JavaScript", icon: JavaScriptLogo },
 ]
 export default function Skills() {
-    return (
-          <div className={`flex mt-8 justify-between space-x-2 items-center`}>
-              {skills.map((skillCol) => {
-                  return (
-                      <div key={skillCol.name} className={`block w-full space-y-2`}>
-                          {skillCol.contents.map((skill) => {
-                              return (
-                                  <GradientBorder key={skill.name}>
-                                      {skill.icon && 
-                                      <div className={`flex w-full bg-bg-color justify-center items-center`}>
-                                        <Image className={`w-12 h-12`} src={skill.icon} alt={skill.name + " logo"}/>
-                                      </div>}
-                                      <p>{skill.name}</p>
-                                  </GradientBorder>
-                              )
-                          })}
-                      </div> 
-                  )
-              })}
-          </div>
-    )
+	return (
+		<div className={`mt-8`}>
+			<h3 className={`text-left text-lg font-bold`}>Skills</h3>
+			<div className={`flex flex-row flex-wrap justify-between space-x-2 items-center`}>
+
+				{skills.map((skillCol) => {
+					return (
+						<div key={skillCol.name} className={`flex flex-row w-full space-x-2`}>
+							{skillCol.contents.map((skill) => {
+								return (
+									<GradientBorder key={skill.name}>
+										{skill.icon &&
+											<div className={`flex w-full bg-bg-color justify-center items-center`}>
+												<Image className={`w-32 h-32`} src={skill.icon} alt={skill.name + " logo"} />
+											</div>}
+										<p>{skill.name}</p>
+									</GradientBorder>
+								)
+							})}
+						</div>
+					)
+				})}
+			</div>
+		</div>
+	)
 }
