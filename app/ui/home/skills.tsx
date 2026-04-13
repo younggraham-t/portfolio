@@ -55,19 +55,19 @@ const otherSkills = [
 ]
 export default function Skills() {
 	return (
-		<div className={`mt-8`}>
-			<h3 className={`text-left text-lg font-bold`}>Skills</h3>
-			<div className={`flex flex-row flex-wrap justify-between space-x-2 items-center`}>
+		<div className={`mt-8 w-full max-w-250 m-auto`}>
+			<h3 className={`text-center md:text-left text-lg font-bold mb-4`}>Skills</h3>
+			<div className={`flex flex-row flex-wrap justify-between space-x-2 items-center m-auto`}>
 
 				{skills.map((skillCol) => {
 					return (
-						<div key={skillCol.name} className={`flex flex-row w-full space-x-2`}>
+						<div key={skillCol.name} className={`flex flex-row flex-wrap w-full space-x-2 items-center justify-center`}>
 							{skillCol.contents.map((skill) => {
 								return (
 									<GradientBorder key={skill.name}>
 										{skill.icon &&
 											<div className={`flex w-full bg-bg-color justify-center items-center`}>
-												<Image className={`w-32 h-32`} src={skill.icon} alt={skill.name + " logo"} />
+												<Image className={`w-16 md:w-32 h-16 md:h-32`} src={skill.icon} alt={skill.name + " logo"} />
 											</div>}
 										<p>{skill.name}</p>
 									</GradientBorder>
