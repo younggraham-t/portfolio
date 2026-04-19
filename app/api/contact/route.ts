@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
         new Promise<string>((resolve, reject) => {
         transport.sendMail(mailOptions, function(err) {
             if(!err) {
-                resolve("Email sent");
+                resolve("true");
             }
             else {
                 reject(err.message);
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
 
     try {
         await sendMailPromise();
-        return NextResponse.json({message: "Email sent"});
+        return NextResponse.json({message: "true"});
 
     } catch (err) {
         return NextResponse.json({error: err}, {status: 500})
