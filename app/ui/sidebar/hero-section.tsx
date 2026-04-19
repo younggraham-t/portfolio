@@ -19,7 +19,7 @@ export default function HeroSection() {
 		<div className={`flex flex-col gap-4 text-center justify-center 
                 items-center mb-2 md:h-80 md:flex-row md:max-w-250 md:m-auto`
 		}>
-			<Image className={`w-48 h-48 rounded-full object-cover`} src={HeroImage} alt="An image of Graham Young" width={2048} height={1638}/>
+			<Image className={`w-48 h-48 rounded-full object-cover`} src={HeroImage} alt="An image of Graham Young" width={2048} height={1638} loading="eager"/>
 			<div className={`flex flex-col gap-1 w-full items-center  md:items-baseline`}>
 				<Summary />
 				<Link
